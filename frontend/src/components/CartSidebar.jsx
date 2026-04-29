@@ -14,6 +14,14 @@ const CartSidebar = ({ open, setOpen, cartItems, setCartItems }) => {
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
 
+
+   let userId = localStorage.getItem("userId");
+
+  if (!userId) {
+    userId = crypto.randomUUID();
+    localStorage.setItem("userId", userId);
+  }
+
   const total = cartItems.reduce(
     (sum, item) => sum + item.price * (item.qty || 1),
     0
