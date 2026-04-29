@@ -10,6 +10,13 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
 
+  let userId = localStorage.getItem("userId");
+
+if (!userId) {
+  userId = crypto.randomUUID(); // unique id
+  localStorage.setItem("userId", userId);
+}
+
   return (
     <BrowserRouter>
 

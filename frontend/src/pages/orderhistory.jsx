@@ -3,6 +3,7 @@ import { CheckCircle, MapPin, Phone,ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const userId = localStorage.getItem("userId");
 
 export default function History() {
   const [orders, setOrders] = useState([]);
@@ -13,7 +14,7 @@ export default function History() {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await fetch(`${API}/api/orders/history/all`);
+        const res = await fetch(`${API}/api/orders/history/all?userId=${userId}`);
         const data = await res.json();
         setOrders(data);
       } catch (err) {

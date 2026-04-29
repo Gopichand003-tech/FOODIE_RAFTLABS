@@ -3,7 +3,7 @@ import Order from "../models/order.js";
 //  CREATE ORDER
 export const createOrder = async (req, res) => {
   try {
-    const { items, total, address, phone } = req.body;
+    const { items, total, address, phone , userId } = req.body;
 
     if (!items || items.length === 0) {
       return res.status(400).json({ msg: "Items required" });
@@ -18,6 +18,7 @@ export const createOrder = async (req, res) => {
       total,
       address,
       phone,
+      userId,
       status: "pending",
     });
 
@@ -70,10 +71,15 @@ export const updateStatus = async (req, res) => {
 //  HISTORY
 export const getHistory = async (req, res) => {
   try {
-    const orders = await Order.find({ status: "delivered" });
+    const { userId } = req.query;
+
+    const orders = await Order.find({
+      status: "delivered",
+      userId, 
+    }).sort({ createdAt: -1 });
+
     res.json(orders);
   } catch (err) {
-    console.log("HISTORY ERROR:", err.message);
     res.status(500).json({ error: err.message });
   }
 };

@@ -12,8 +12,7 @@ router.post("/", createOrder);
 
 router.get("/history/all", getHistory);
 router.get("/:id", getOrder);
-
-//  NEW ROUTE 
+ 
 router.put("/:id/status", updateStatus);
 
 export default router;

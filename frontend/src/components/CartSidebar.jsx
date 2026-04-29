@@ -68,6 +68,7 @@ const CartSidebar = ({ open, setOpen, cartItems, setCartItems }) => {
           total,
           address,
           phone,
+          userId,
         }),
       });
 
