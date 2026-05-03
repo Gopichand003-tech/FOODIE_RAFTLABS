@@ -29,12 +29,12 @@ export default function Home({
       <Offers />
 
       {/* CART SIDEBAR */}
-      {/* <CartSidebar
+      <CartSidebar
         open={cartOpen}
         setOpen={setCartOpen}
         cartItems={cartItems}
         setCartItems={setCartItems}
-      /> */}
+      />
 
       <Footer />
     </div>
