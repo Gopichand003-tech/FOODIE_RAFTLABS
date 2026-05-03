@@ -5,7 +5,7 @@ import { menu } from "../data/menu";
 const MenuSection = ({ setCartItems, setCartOpen }) => {
   const scrollRef = useRef(null);
 
-  // 🔥 Button scroll
+  //  Button scroll
   const scroll = (direction) => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({

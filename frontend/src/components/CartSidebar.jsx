@@ -90,7 +90,7 @@ const CartSidebar = ({ open, setOpen, cartItems, setCartItems }) => {
         setCartItems([]);
         setOpen(false);
         navigate("/track");
-      }, 1500);
+      }, 200);
     } catch (err) {
       console.log("ERROR:", err);
     }
