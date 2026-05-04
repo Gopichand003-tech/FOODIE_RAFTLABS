@@ -83,7 +83,7 @@ const Navbar = ({ setCartOpen, cartItems }) => {
         </div>
       </div>
 
-      import { Link } from "react-router-dom";
+    
 
 
 {/* MOBILE MENU */}
