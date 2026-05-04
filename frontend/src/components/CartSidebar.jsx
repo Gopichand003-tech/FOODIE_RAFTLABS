@@ -107,11 +107,11 @@ const CartSidebar = ({ open, setOpen, cartItems, setCartItems }) => {
         />
 
         {/* SIDEBAR */}
-        <div className="fixed top-0 right-0 h-full w-[420px] bg-gray-950 text-white shadow-2xl z-50">
+        <div className="fixed top-0 right-0 h-full w-[415px] bg-gray-950 text-white shadow-2xl z-50">
           
           {/* HEADER */}
           <div className="flex justify-between items-center px-6 py-5 border-b border-gray-800">
-            <h2 className="flex items-center gap-2 text-lg text-white ">
+            <h2 className="flex items-center gap-2 text-lg text-white ml-2">
               <ShoppingCart className="text-orange-500"/> Cart
             </h2>
             <X onClick={() => setOpen(false)} className="cursor-pointer" />
@@ -151,7 +151,7 @@ const CartSidebar = ({ open, setOpen, cartItems, setCartItems }) => {
           </div>
 
           {/* STEP */}
-          <div className="p-5 border-t border-gray-900 space-y-3 -translate-y-5">
+          <div className="p-5 border-t border-gray-900 space-y-3 -translate-y-7 ml-1">
             {step === 1 && (
               <>
                 <input
