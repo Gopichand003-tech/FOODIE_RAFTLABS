@@ -26,7 +26,9 @@ const Hero = () => {
         </p>
 
         <div className="flex gap-4 flex-wrap">
-          <button className="px-8 py-4 bg-orange-500 hover:bg-orange-600 transition-all duration-300 rounded-xl font-semibold shadow-lg text-lg">
+          <button
+           onClick={() => navigate("/menu")}
+          className="px-8 py-4 bg-orange-500 hover:bg-orange-600 transition-all duration-300 rounded-xl font-semibold shadow-lg text-lg">
             Order Now
           </button>
 
