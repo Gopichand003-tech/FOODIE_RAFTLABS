@@ -1,6 +1,9 @@
 import { Flame } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 py-28 gap-16 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
 
@@ -27,7 +30,9 @@ const Hero = () => {
             Order Now
           </button>
 
-          <button className="px-8 py-4 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300 rounded-xl text-lg">
+          <button 
+            onClick={() => navigate("/menu")}
+          className="px-8 py-4 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300 rounded-xl text-lg">
             Explore Menu
           </button>
         </div>

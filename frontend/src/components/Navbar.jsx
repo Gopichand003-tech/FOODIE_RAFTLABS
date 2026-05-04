@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink , Link} from "react-router-dom";
 import { ShoppingCart, Menu, X , Flame } from "lucide-react";
 
 const Navbar = ({ setCartOpen, cartItems }) => {
@@ -83,14 +83,30 @@ const Navbar = ({ setCartOpen, cartItems }) => {
         </div>
       </div>
 
-      {/* MOBILE MENU */}
-      {open && (
-        <div className="md:hidden bg-gray-900 px-6 py-4 space-y-4 text-center">
-          <p className="hover:text-orange-500 cursor-pointer">Home</p>
-          <p className="hover:text-orange-500 cursor-pointer">History</p>
-          <p className="hover:text-orange-500 cursor-pointer">Delivery Status</p>
-        </div>
-      )}
+      import { Link } from "react-router-dom";
+
+{/* MOBILE MENU */}
+{open && (
+  <div className="md:hidden bg-gray-900 px-6 py-4 space-y-4 text-center">
+
+    <Link to="/" className="block w-full bg-gray-800 hover:bg-orange-500 transition duration-300 py-2 rounded-lg">
+      Home
+    </Link>
+
+    <Link to="/history" className="block w-full bg-gray-800 hover:bg-orange-500 transition duration-300 py-2 rounded-lg">
+      History
+    </Link>
+
+    <Link to="/track" className="block w-full bg-gray-800 hover:bg-orange-500 transition duration-300 py-2 rounded-lg">
+      Delivery Status
+    </Link>
+
+    <Link to="/menu" className="block w-full bg-gray-800 hover:bg-orange-500 transition duration-300 py-2 rounded-lg">
+      Menu
+    </Link>
+
+  </div>
+)}
     </nav>
   );
 };
