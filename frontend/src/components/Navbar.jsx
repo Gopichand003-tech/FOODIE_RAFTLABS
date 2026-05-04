@@ -85,6 +85,7 @@ const Navbar = ({ setCartOpen, cartItems }) => {
 
       import { Link } from "react-router-dom";
 
+
 {/* MOBILE MENU */}
 {open && (
   <div className="md:hidden bg-gray-900 px-6 py-4 space-y-4 text-center">
